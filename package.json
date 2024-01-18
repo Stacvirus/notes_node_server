@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "build:ui": "rm -rf dist && cd ~/Documents/react_projects/part1d && npm run build && cp -r dist ~/Documents/react_projects/NodeServer",
+    "deploy": "git add . && git commit -m latest && git push"
   },
   "author": "stac virus",
   "license": "ISC",
