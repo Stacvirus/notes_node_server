@@ -1,0 +1,11 @@
+get http://localhost:3005/api/notes/
+###
+delete http://localhost:3005/api/notes/4
+###
+post http://localhost:3005/api/notes
+Content-Type: application/json
+
+{
+    "content": "What are you doing?",
+    "important": false
+}
