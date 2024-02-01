@@ -43,6 +43,7 @@ notesRouter.post('/', async (req, res, next) => {
     });
     try {
         const result = await newNote.save();
+        res.status(201).json(result)
     } catch (error) {
         next(error);
     }
