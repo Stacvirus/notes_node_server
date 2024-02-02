@@ -1,8 +1,8 @@
-get http://localhost:3005/api/notes/
+get http://localhost:3001/blog/notes/
 ###
 delete http://localhost:3005/api/notes/4
 ###
-post http://localhost:3005/api/notes
+post http://localhost:3001/blog/notes
 Content-Type: application/json
 
 {
