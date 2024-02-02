@@ -8,10 +8,9 @@ const url = '/blog/notes';
 
 beforeEach(async () => {
     await Note.deleteMany({});
-    let noteObject = new Note(helper.initNotes[0]);
-    await noteObject.save();
-    noteObject = new Note(helper.initNotes[1]);
-    await noteObject.save();
+    let noteObject = helper.initNotes.map(note => new Note(note));
+    const promiseArray = noteObject.map(note => note.save());
+    await Promise.all(promiseArray);
 }, 100000);
 
 test('notes are returned as json', async () => {
