@@ -9,3 +9,12 @@ Content-Type: application/json
     "content": "What are you doing?",
     "important": false
 }
+###
+post http://localhost:3001/blog/users
+Content-Type: application/json
+
+{
+    "username": "TheBigFucker",
+    "name": "stacvirus",
+    "password": "areyoudeath??"
+}
