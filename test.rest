@@ -2,7 +2,7 @@ get http://localhost:3001/blog/notes/
 ###
 delete http://localhost:3005/api/notes/4
 ###
-post http://localhost:3001/blog/notes
+post http://localhost:3002/blog/notes
 Content-Type: application/json
 
 {
@@ -10,11 +10,20 @@ Content-Type: application/json
     "important": false
 }
 ###
-post http://localhost:3001/blog/users
+post http://localhost:3002/blog/users
 Content-Type: application/json
 
 {
     "username": "TheBigFucker",
     "name": "stacvirus",
     "password": "areyoudeath??"
+}
+###
+post http://localhost:3001/blog/notes
+Content-Type: application/json
+
+{
+    "content": "can you suck me ?!!!",
+    "important": true,
+    "userId": "65c36767c3e425c41afd3531"
 }
