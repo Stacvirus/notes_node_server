@@ -1,12 +1,17 @@
 get http://localhost:3001/blog/notes/
+
+###
+get http://localhost:3001/blog/users
+
 ###
 delete http://localhost:3005/api/notes/4
 ###
-post http://localhost:3002/blog/notes
+post http://localhost:3001/blog/notes
 Content-Type: application/json
+Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBlcmZlY3QiLCJpZCI6IjY1Yzg4NjY5ZjMxZWZkN2I0NWFlNWJhZSIsImlhdCI6MTcwNzcyODI1OX0.4z9MHd7XZw6Mdnq4yDL9bkCbMsKPuDiwTNUFIdlHdbo
 
 {
-    "content": "What are you doing?",
+    "content": "another notes test to finally validate it!",
     "important": false
 }
 ###
@@ -25,5 +30,37 @@ Content-Type: application/json
 {
     "content": "can you suck me ?!!!",
     "important": true,
-    "userId": "65c36767c3e425c41afd3531"
+    "userId": "65c509d0dc318a58386abe84"
 }
+
+###
+post http://localhost:3001/blog/login
+Content-Type: application/json
+
+{
+    "username": "perfect",
+    "password": "123@123"
+}
+
+# perfect: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBlcmZlY3QiLCJpZCI6IjY1Yzg4NjY5ZjMxZWZkN2I0NWFlNWJhZSIsImlhdCI6MTcwNzcyODI1OX0.4z9MHd7XZw6Mdnq4yDL9bkCbMsKPuDiwTNUFIdlHdbo
+
+###
+post http://localhost:3001/blog/users
+Content-Type: application/json
+
+{
+    "username": "pe",
+    "password": "@123"
+}
+
+
+
+
+
+
+
+
+
+
+
+

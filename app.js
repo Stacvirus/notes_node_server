@@ -8,6 +8,7 @@ const middleware = require('./utils/middleware');
 const mongoose = require('mongoose');
 const MONGODB_URI = 'mongodb://127.0.0.1:27017';
 const usersRouter = require('./controllers/users');
+const loginRouter = require('./controllers/login');
 
 
 mongoose.set('strictQuery', false);
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(middleware.requestLogger);
 app.use('/blog/notes', notesRouter);
 app.use('/blog/users', usersRouter);
+app.use('/blog/login', loginRouter);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
