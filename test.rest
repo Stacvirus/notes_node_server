@@ -38,9 +38,14 @@ post http://localhost:3001/blog/login
 Content-Type: application/json
 
 {
-    "username": "perfect",
-    "password": "123@123"
+    "username": "stac",
+    "password": "@123"
 }
+
+# {
+#     "username": "perfect",
+#     "password": "123@123"
+# }
 
 # perfect: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBlcmZlY3QiLCJpZCI6IjY1Yzg4NjY5ZjMxZWZkN2I0NWFlNWJhZSIsImlhdCI6MTcwNzcyODI1OX0.4z9MHd7XZw6Mdnq4yDL9bkCbMsKPuDiwTNUFIdlHdbo
 
@@ -49,12 +54,9 @@ post http://localhost:3001/blog/users
 Content-Type: application/json
 
 {
-    "username": "pe",
+    "username": "stac",
     "password": "@123"
 }
-
-
-
 
 
 

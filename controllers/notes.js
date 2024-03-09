@@ -77,7 +77,12 @@ notesRouter.post('/', async (req, res, next) => {
 // update a note with the put function handler
 notesRouter.put('/:id', async (req, res, next) => {
     const id = req.params.id;
-    let note = await Note.findById(id);
+    const body = req.body;
+    const note = {
+        content: body.content,
+        important: !body.important
+    }
+
     try {
         const result = await Note.findByIdAndUpdate(id, note, { new: true });
         res.json(result);
